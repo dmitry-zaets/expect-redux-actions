@@ -1,4 +1,6 @@
-# Expect assertions for redux actions testing
+# expect-redux-actions
+
+Expect assertions for redux actions testing
 
 This library adds assertions for [redux actions](http://redux.js.org/docs/advanced/AsyncActions.html) testing into [expect](https://github.com/mjackson/expect) library. It use [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store) to mock redux store.
 
