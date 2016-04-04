@@ -6,16 +6,16 @@ import getMockStore from '../src/mockStore';
 expectReduxActions.registerMiddlewares([thunk]);
 expectReduxActions.registerAssertions();
 
-function asyncFunction(){
+function asyncFunction() {
   return Promise.resolve();
 }
 
-const start = () => { return { type: 'test-action-start' }};
-const anotherStart = () => { return { type: 'test-action-another-start' }};
-const finish = () => { return { type: 'test-action-finish' }};
-const fail = () => { return { type: 'test-action-fail' }};
+const start = () => { return { type: 'test-action-start' }; };
+const anotherStart = () => { return { type: 'test-action-another-start' }; };
+const finish = () => { return { type: 'test-action-finish' }; };
+const fail = () => { return { type: 'test-action-fail' }; };
 
-const actionWithGetState = (data) => { return { type: 'test-action-with-get-state', data: data }};
+const actionWithGetState = (data) => { return { type: 'test-action-with-get-state', data }; };
 
 function actionCreatorWithGetState() {
   return (dispatch, getState) => {
@@ -35,9 +35,9 @@ function asyncActionCreator() {
   };
 }
 
-const parentStart = () => { return { type: 'parent-test-action-start' }};
-const parentFinish = () => { return { type: 'parent-test-action-finish' }};
-const parentFail = () => { return { type: 'parent-test-action-fail' }};
+const parentStart = () => { return { type: 'parent-test-action-start' }; };
+const parentFinish = () => { return { type: 'parent-test-action-finish' }; };
+const parentFail = () => { return { type: 'parent-test-action-fail' }; };
 
 function parentAsyncActionCreator() {
   return dispatch => {
@@ -75,12 +75,11 @@ describe('default redux-mock-store way', () => {
   });
 });
 
-
 describe('expect extensions', () => {
   describe('.withState', () => {
     it('should accept object and setup getState', (done) => {
       expect(actionCreatorWithGetState())
-        .withState({ property: 'value'})
+        .withState({ property: 'value' })
         .toDispatchActions(actionWithGetState({ property: 'value' }), done);
     });
 
