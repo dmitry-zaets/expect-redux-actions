@@ -1,7 +1,7 @@
 {
   "name": "expect-redux-actions",
   "version": "0.1.2",
-  "description": "",
+  "description": "Expect assertions for redux actions testing",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "rimraf lib && babel src --out-dir lib",
@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/dmitry-zaets/expect-redux-actions.git"
   },
-  "author": "",
+  "authors": [
+    "Dmitry Zaets",
+    "Yann Torres"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dmitry-zaets/expect-redux-actions/issues"
