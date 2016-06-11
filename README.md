@@ -1,4 +1,4 @@
-# ~~expect-redux-actions~
+# ~~expect-redux-actions~~
 # Moved to [redux-actions-assertions](https://www.npmjs.com/package/redux-actions-assertions)
 
 Expect assertions for redux actions testing
